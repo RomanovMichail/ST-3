@@ -43,9 +43,11 @@ class TimedDoor : public Door {
 };
 
 class Timer {
+ private:
   TimerClient *client;
   void sleep(int);
  public:
+  Timer();
   void tregister(int, TimerClient*);
 };
 
