@@ -96,3 +96,4 @@ class Timer {
 - **src/TimedDoor.cpp** - реализация методов классов
 - **src/main.cpp** - пример использования системы
 - **test/tests.cpp** - модульные тесты
+ 
