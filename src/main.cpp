@@ -9,7 +9,7 @@ int main() {
 
     tDoor.lock();
     std::cout << "Door locked" << std::endl;
-    std::cout << "Is door opened: " << 
+    std::cout << "Is door opened: " <<
       (tDoor.isDoorOpened() ? "yes" : "no") << std::endl;
     std::cout << "Unlocking door for 2 seconds..." << std::endl;
     tDoor.unlock();
