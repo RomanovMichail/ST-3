@@ -65,7 +65,7 @@ void Timer::tregister(int timeout, TimerClient* c) {
       }
     }
   });
-  t.detach(); 
+  t.detach();
 }
 
 

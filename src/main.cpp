@@ -9,12 +9,11 @@ int main() {
 
     tDoor.lock();
     std::cout << "Door locked" << std::endl;
-    std::cout << "Is door opened: " << (tDoor.isDoorOpened() ? "yes" : "no") << std::endl;
-
+    std::cout << "Is door opened: " << 
+      (tDoor.isDoorOpened() ? "yes" : "no") << std::endl;
     std::cout << "Unlocking door for 2 seconds..." << std::endl;
     tDoor.unlock();
     std::cout << "Door unlocked" << std::endl;
-
   } catch (const std::exception& e) {
     std::cout << "Exception caught: " << e.what() << std::endl;
   }

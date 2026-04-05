@@ -113,13 +113,11 @@ TEST_F(TimedDoorTest, TimeoutWithDifferentValues) {
   TimedDoor shortTimeoutDoor(50);
   shortTimeoutDoor.unlock();
   std::this_thread::sleep_for(std::chrono::milliseconds(70));
-  
   EXPECT_THROW(shortTimeoutDoor.throwState(), std::exception);
 
   TimedDoor longTimeoutDoor(2000);
   longTimeoutDoor.unlock();
-  longTimeoutDoor.lock(); 
-  
+  longTimeoutDoor.lock();
   EXPECT_FALSE(longTimeoutDoor.isDoorOpened());
   EXPECT_NO_THROW(longTimeoutDoor.throwState());
 }
@@ -135,7 +133,8 @@ TEST(MockDoorTest, DoorInterfaceMethods) {
 
   EXPECT_CALL(mockDoor, lock()).Times(1);
   EXPECT_CALL(mockDoor, unlock()).Times(1);
-  EXPECT_CALL(mockDoor, isDoorOpened()).Times(1).WillOnce(testing::Return(true));
+  EXPECT_CALL(mockDoor, isDoorOpened())
+    .Times(1).WillOnce(testing::Return(true));
 
   mockDoor.lock();
   mockDoor.unlock();
